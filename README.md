@@ -21,11 +21,20 @@ as well as see movie ratings.
 ### Init database
     make init_db
 
-### Run server
+### Run service:
     make up
 
-### Run admin panel
-    make admin
+You can then access the service at 
+```
+http://localhost:80/
+```
+
+and admin panel at:
+```
+http://localhost:5000/admin
+```
+
+
 
 ## API Endpoints
 
@@ -45,20 +54,4 @@ create an account before doing anything.
 To get full details about endpoints go to  
 ```
 http://localhost:80/docs
-```
-
-## Docker
-
-To start the service, just run the following command:
-
-```Shell
-docker-compose up -d --build
-```
-You can then access the service at:
-```
-http://localhost:80/docs
-```
-and admin panel at:
-```
-http://localhost:5000/admin
 ```

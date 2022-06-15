@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "homework5"
+name = "Movie rating service"
 version = "1.0.0"
 description = "Movie rating service"
 authors = ["Andrej Tsvetkov  <cvetkoandrejj@gmail.com>"]
