@@ -9,6 +9,7 @@ services:
       - app_data:/code
     ports:
       - "80:80"
+    entrypoint: ["make", "app"]
 
   admin:
     build:
@@ -20,8 +21,7 @@ services:
       - FLASK_APP=app.admin
     ports:
       - "5000:5000"
-    entrypoint: ["flask", "run"]
-    command: ["--port=5000", "--host=0.0.0.0"]
+    entrypoint: ["make", "admin"]
 
 
 volumes:
