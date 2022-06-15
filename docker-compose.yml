@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+    restart: always
+    volumes:
+      - app_data:/code
+    ports:
+      - "80:80"
+
+  admin:
+    build:
+      context: .
+    restart: always
+    volumes:
+      - app_data:/code
+    environment:
+      - FLASK_APP=app.admin
+    ports:
+      - "5000:5000"
+    entrypoint: ["flask", "run"]
+    command: ["--port=5000", "--host=0.0.0.0"]
+
+
+volumes:
+  app_data:
